@@ -159,8 +159,9 @@ def can_drop(hand, l2):
     else:
         return False
 
+
 font2 = pygame.font.SysFont(None, 45)
-img = font2.render('GIVE UP', True, (180,0,0))
+img = font2.render('GIVE UP', True, (180, 0, 0))
 font = pygame.font.SysFont(None, 400)
 print(cards)
 hcih = False
@@ -181,9 +182,9 @@ while running:
             pygame.time.wait(100)
             if event.button == 1:
                 mx, my = pygame.mouse.get_pos()
-                #pygame.draw.rect(screen, (255, 0, 0), (mx, my, 15, 15))
+                # pygame.draw.rect(screen, (255, 0, 0), (mx, my, 15, 15))
                 if my < 200:
-                    if 440<mx<560 and 53<my<103:
+                    if 440 < mx < 560 and 53 < my < 103:
                         img = font.render('YOU LOST', True, (180, 0, 0))
                         screen.blit(img, (0, 400))
                         pygame.display.update()
@@ -263,7 +264,7 @@ while running:
                         R[i].pop()
     pygame.draw.rect(screen, (35, 35, 35), (440, 53, 120, 50))
     screen.blit(img, (440, 65))
-    #if F[0][-1][2] == F[1][-1][2] == F[2][-1][2] == F[3][-1][2] == 13:
+    # if F[0][-1][2] == F[1][-1][2] == F[2][-1][2] == F[3][-1][2] == 13:
     if len(F[0]) == len(F[1]) == len(F[2]) == len(F[3]) == 13:
         img = font.render('YOU WON!', True, (180, 0, 0))
         screen.blit(img, (0, 400))
